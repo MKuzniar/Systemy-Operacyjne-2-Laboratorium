@@ -38,12 +38,14 @@ echo "-----------------------"
 #counting files left in SOURCE_DIR
 COUNTER=$(ls ${SOURCE_DIR} | wc -w)
 
+echo "Zostało ${COUNTER} plików"
+
 if [[ ${COUNTER} -le 0 ]]; then 
     echo "Tu był Kononowicz"
 elif ([[ ${COUNTER} -gt 0 ]] && [[ ${COUNTER} -le 2 ]]); then
-    echo "Jeszcze coś zostało. Mniej niż 2 pliki"
+    echo "Jeszcze coś zostało. Mniej niż 2 pliki lub dokładnie 2 pliki"
 elif ([[ ${COUNTER} -gt 2 ]] && [[ ${COUNTER} -le 4 ]]); then
-    echo "Jeszcze coś zostało. Więcej niż 2 ale mniej niż 4 pliki"
+    echo "Jeszcze coś zostało. Więcej niż 2 ale mniej niż 4 pliki lub dokładnie 4 pliki"
 elif [[ ${COUNTER} -gt 4 ]]; then
     echo "Jeszcze coś zostało. Więcej niż 2 pliki. Więcej niż 4 pliki"
 else
